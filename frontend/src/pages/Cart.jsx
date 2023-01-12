@@ -9,7 +9,7 @@ const Cart = () => {
     const dispatch=useDispatch();
     const navigate = useNavigate();
     const onToken=async (stripToken)=>{
-        const res=await axios.post('http://localhost:5000/api/stripe/payment',{
+        const res=await axios.post('https://nodejsecommerce.onrender.com/api/stripe/payment',{
             tokenId:stripToken?.id,
             amount:data?.total *100
         });

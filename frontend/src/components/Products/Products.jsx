@@ -8,7 +8,7 @@ const Products = ({Categories,filters,sort}) => {
         const getProduct= async()=>{
             try {
                 let res;
-                Categories ? res=await axios.get(`http://localhost:5000/api/products?categories=${Categories}`): res=await axios.get(`http://localhost:5000/api/products`)
+                Categories ? res=await axios.get(`https://nodejsecommerce.onrender.com/api/products?categories=${Categories}`): res=await axios.get(`https://nodejsecommerce.onrender.com/api/products`)
                 setProducts(res.data);
             } catch (error) {
                 console.log(error);

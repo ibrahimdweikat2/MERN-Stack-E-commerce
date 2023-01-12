@@ -12,7 +12,7 @@ const SingleProduct = () => {
   const [size,setSize]=useState(null);
   useEffect(()=>{
     const getProduct=async ()=>{
-      const res=await axios.get(`http://localhost:5000/api/products/find/${id}`);
+      const res=await axios.get(`https://nodejsecommerce.onrender.com/api/products/find/${id}`);
       setProduct(res?.data);
       setColor(res?.data?.color[0]);
       setSize(res?.data?.size[0]);
